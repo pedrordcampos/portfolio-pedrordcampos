@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Cores para o Modo Escuro */
+:root, :root[data-theme='dark'] {
+    --primary-color: #B0BEC5;             /* Cor Primária - Cinza claro */
+    --primary-bg-color: #121212;          /* Fundo Primário (escuro) */
+    --secondary-bg-color: #1E1E1E;        /* Fundo Secundário (um pouco mais claro) */
+    --border-color: #B0BEC5;              /* Cor da Borda */
+    --title-color: #FFFFFF;               /* Cor do Título */
+    --link-color: #B0BEC5;                /* Cor do Link */
+    --icon-color: #FFFFFF;                /* Cor do Ícone */
+    --text-color: #E0E0E0;                /* Cor do Texto */
+}
+
+/* Cores para o Modo Claro */
+:root, :root[data-theme='light'] {
+    --primary-color: #444444;             /* Cor Primária - Cinza escuro */
+    --primary-bg-color: #FFFFFF;          /* Fundo Primário (claro) */
+    --secondary-bg-color: #F0F0F0;        /* Fundo Secundário - Cinza claro */
+    --border-color: #CCCCCC;              /* Cor da Borda - Cinza claro */
+    --title-color: #000000;               /* Cor do Título - Preto */
+    --link-color: #444444;                /* Cor do Link - Cinza escuro */
+    --icon-color: #444444;                /* Cor do Ícone - Cinza escuro */
+    --text-color: #333333;                /* Cor do Texto - Cinza escuro */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    vertical-align: baseline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--primary-bg-color);  /* Cor de fundo do body */
+    font-family: 'Inter', Tahoma, Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--text-color);
+}
+
+header, footer, .content {
+    background-color: var(--secondary-bg-color); /* Cor de fundo para header, footer e content */
+}
+
+.header__brand .brand__logo {
+    width: 3.25rem;
+    height: 3.25rem;
+}
+
+i {
+    color: var(--icon-color);
+}
+
+.header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.header__toggle {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#toggleTheme {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    background: var(--secondary-bg-color); /* Fundo do menu */
+}
+
+.menu__item {
+    width: 100%;
+    list-style: none; /* Remove bullets */
+}
+
+.menu__link {
+    text-decoration: none;
+}
+
+.menu--principal {
+    gap: 1rem;
+}
+
+.menu--mobile {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border-color);
+    padding: 0 1rem;
+    background: var(--secondary-bg-color); /* Fundo do menu mobile */
+}
+
+.menu--mobile .menu__link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.menu__icon, .menu__text {
+    color: var(--text-color);
+}
+
+.menu__link.active .menu__icon, 
+.menu__link.active .menu__text,
+.menu__link:hover .menu__icon, 
+.menu__link:hover .menu__text {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.menu__icon {
+    font-size: 1.5rem;
+}
+
+.menu__text {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.header__nav {
+    display: none;
+}
+
+.footer--socialmedia {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 200;
+}
+
+@media (min-width: 768px) {
+    .header {
+        position: fixed;
+        padding: 1rem 4rem;
+        border-bottom: 1px solid var(--border-color);
+        background: var(--secondary-bg-color); /* Fundo do cabeçalho */
+    }
+    .nav--mobile {
+        display: none;
+    }
+    .header__nav {
+        display: flex;
+    }
+  
+    .header__toggle, .header__nav {
+        min-width: 30%;
+    }
+}
+
+@media (min-width: 1400px) {
+    .header {
+        padding: 1rem 8rem;
+    }
+}
+
+.content {
+    flex: 1;
+    padding: 1rem; 
+}
+
+.footer {
+    text-align: center;
+    padding: 1rem;
+    color: var(--text-color);
+    background-color: var(--secondary-bg-color); /* Fundo do rodapé */
+}
