@@ -2,6 +2,8 @@
 
 Este é o meu portfólio profissional, desenvolvido como parte do Bootcamp **"Ri Happy - Front-end do Zero"** da [Digital Innovation One (DIO)](https://www.dio.me/). Aqui, apresento alguns dos meus principais projetos, as habilidades que adquiri ao longo da minha carreira e informações sobre minha trajetória como professor e desenvolvedor web.
 
+Você pode visualizar o meu portfólio [clicando aqui](https://pedrordcampos.github.io/portfolio-pedrordcampos/)
+
 ## 🎯 Objetivo
 O portfólio foi criado com o objetivo de compartilhar meus projetos e habilidades, permitindo que recrutadores, colaboradores e a comunidade possam conhecer melhor meu trabalho e minha evolução como desenvolvedor.
 
